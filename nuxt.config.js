@@ -2,10 +2,12 @@ import createSitemapRoutes from "./utils/createSitemap";
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   
+  // rph start
   server: {
     host: '0.0.0.0', // Default: localhost
     port: 3000,      // Default port
   },
+  // rph end
 
   head: {
     title: "TFD Nuxt Tailwind Boilerplate",
