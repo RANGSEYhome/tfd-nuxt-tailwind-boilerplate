@@ -3,10 +3,10 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
   // rph start
-  server: {
-    host: '0.0.0.0', // Default: localhost
-    port: 3000,      // Default port
-  },
+  // server: {
+  //   host: '0.0.0.0', // Default: localhost
+  //   port: 3000,      // Default port
+  // },
   // rph end
   
   head: {
@@ -67,10 +67,7 @@ export default {
         ? false
         : process.env.NODE_ENV !== "staging",
 
-    //baseURL: process.env.BASE_URL || "http://localhost:80",
-    // rph start
-    baseURL: process.env.BASE_URL || "http://localhost:8080",
-    // rph end
+    baseURL: process.env.BASE_URL || "http://localhost:80",
 
     // proxyHeaders: false,
     // credentials: false
@@ -78,10 +75,7 @@ export default {
   proxy: {
     "/api/v1/": {
 
-      //target: "http://localhost:80/api/v1",
-      // rph start
-      target: "http://localhost:8080/api/v1",
-      // rph end
+      target: "http://localhost:80/api/v1",
 
       pathRewrite: { "^/api/v1/": "" },
     },
@@ -169,10 +163,7 @@ export default {
   loading: false,
   publicRuntimeConfig: {
 
-    //baseURL: process.env.BASE_URL || "http://localhost:80",
-    // rph start
-    baseURL: process.env.BASE_URL || "http://localhost:8080",
-    // rph end
+    baseURL: process.env.BASE_URL || "http://localhost:80",
 
     nodeEnv: process.env.NODE_ENV || "development",
   },
