@@ -71,7 +71,10 @@ export default {
       this.name = "";
       this.email = "";
       this.password = "";
-      this.passwordConfirmation = "";
+      // this.passwordConfirmation = "";
+      // rph start
+      this.confirmPassword = "";
+      // rph end
     },
     async submit() {
       try {
