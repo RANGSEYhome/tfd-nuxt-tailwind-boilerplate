@@ -71,10 +71,12 @@ export default {
       this.name = "";
       this.email = "";
       this.password = "";
+
       // this.passwordConfirmation = "";
       // rph start
       this.confirmPassword = "";
       // rph end
+
     },
     async submit() {
       try {
@@ -88,7 +90,12 @@ export default {
           email: this.email,
           name: this.name,
           password: this.password,
-          passwordConfirmation: this.passwordConfirmation,
+
+          // passwordConfirmation: this.passwordConfirmation,
+          // rph start
+          confirmPassword: this.confirmPassword,
+          // rph end
+
         });
         this.clear();
       } catch (error) {
