@@ -16,6 +16,7 @@
             leading-loose
           " v-html="$t('tfd_mission')"></p>
           <p>Test trigger redeployment upon push to the forked repository on VPS: Hello World!</p>
+          <p>Test trigger redeployment upon push to the forked repository on VPS: Hello World Again!</p>
       </div>
       <Registration />
     </div>
