@@ -15,6 +15,7 @@
             text-left
             leading-loose
           " v-html="$t('tfd_mission')"></p>
+          <p>Test trigger redeployment upon push to the forked repository on VPS: Hello World!</p>
       </div>
       <Registration />
     </div>
