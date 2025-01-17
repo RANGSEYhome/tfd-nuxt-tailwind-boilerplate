@@ -38,13 +38,25 @@
       }}</label>
       <input id="password" v-model="password" type="password" name="password" :required="true" class="tfd-input" />
     </div>
-    <div class="relative mb-4">
+
+    <!-- <div class="relative mb-4">
       <label for="confirmPassword" class="leading-7 text-sm text-gray-600">{{
         $t("confirmPassword")
       }}</label>
       <input id="confirmPassword" v-model="confirmPassword" type="password" name="confirmPassword" :required="true"
         class="tfd-input" />
+    </div> -->
+
+    <!-- start rph -->
+    <div class="relative mb-4">
+      <label for="passwordConfirmation" class="leading-7 text-sm text-gray-600">{{
+        $t("passwordConfirmation")
+      }}</label>
+      <input id="passwordConfirmation" v-model="passwordConfirmation" type="password" name="passwordConfirmation" :required="true"
+        class="tfd-input" />
     </div>
+    <!-- end rph -->
+
     <div class="flex flex-row justify-center space-x-4">
       <button type="submit">
         <ShadowButton text="sign_up" color="bg-tfd" />
@@ -62,7 +74,11 @@ export default {
       name: "",
       email: "",
       password: "",
-      confirmPassword: "",
+      
+      // confirmPassword: "",
+      // start rph
+      passwordConfirmation: "",
+      // end rph
     };
   },
   methods: {
@@ -71,12 +87,7 @@ export default {
       this.name = "";
       this.email = "";
       this.password = "";
-
-      // this.passwordConfirmation = "";
-      // rph start
-      this.confirmPassword = "";
-      // rph end
-
+      this.passwordConfirmation = "";
     },
     async submit() {
       try {
@@ -90,12 +101,7 @@ export default {
           email: this.email,
           name: this.name,
           password: this.password,
-
-          // passwordConfirmation: this.passwordConfirmation,
-          // rph start
-          confirmPassword: this.confirmPassword,
-          // rph end
-
+          passwordConfirmation: this.passwordConfirmation,
         });
         this.clear();
       } catch (error) {
